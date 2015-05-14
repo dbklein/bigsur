@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Friend Trip 2015</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css">
+</head>
+<body>
+
+<% if notice %>
+  <p class="notice"><%= notice %></p>
+  <% end %>
+
+<% if alert %>
+  <p class="alert"><%= alert %></p>
+  <% end %>
+
+<% if user_signed_in? %>
+  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+  <br>
+    You're currently signed in as <% current_user.email %>
+  <% else %>
+    <%= link_to 'Sign in', new_user_session_path %>
+  <% end %>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-brand">Big Sur Blog</div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to 'Home', root_path %></li>
+    </ul>
+  </div>
+</nav>
+
+<div class = 'container'>
+<%= yield %>
+</div>
+
+</body>
+</html>
