@@ -1,14 +1,14 @@
 <h2>Posts</h2>
 <div class="well">
-<% if @posts.present? %>
+  <% if @posts.present? %>
 
-  <% @posts.each do |post| %>
-    <h2><%= post[:title] %></h2>
-    <p><%= post[:body] %></p>
-  <% end %>
+    <% @posts.each do |post| %>
+      <h2><%= post[:title] %></h2>
+      <p><%= post[:body] %></p>
+    <% end %>
 
-<% else %>
+  <% else %>
 
-  <p>Trip hasn't started yet</p>
-</div>
+    <p>Trip hasn't started yet</p>
+  </div>
 <% end %>
