@@ -1,15 +1,13 @@
 <h2>New post</h2>
 
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title, placeholder: 'Post Title'  %>
 
   <br>
 
-  <%= f.label :body %>
-  <%= f.text_field :body %>
+  <%= f.input :body, placeholder: 'Type post here.' %>
 
   <br>
 
-  <%= f.submit 'Post' %>
+  <%= f.button :submit %>
 <% end %>
