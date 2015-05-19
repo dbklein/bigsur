@@ -47,3 +47,12 @@ gem 'pry-rails'
 gem 'devise'
 gem 'simple_form'
 # gem 'dotenv-rails', :groups => [:development, :test]
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :development do
+  gem 'sqlite'
+end
