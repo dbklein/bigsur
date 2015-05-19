@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1
-  # GET /posts/1.json
   def show
+    @post = Post.find(params[:id])
   end
 
   # GET /posts/new
@@ -14,7 +14,20 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  def edit
+  # def edit
+  # end
+
+  def create
+    @post = Post.new(post_params)
+    @post.save
+    redirect_to @post
+
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :body)
   end
 
 end
