@@ -44,5 +44,6 @@ group :development, :test do
 end
 
 gem 'pry-rails'
-gem 'simple-form'
 gem 'devise'
+# gem 'simple-form'
+# gem 'dotenv-rails', :groups => [:development, :test]

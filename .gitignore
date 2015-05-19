@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+key: 0a914bc7a3b84ed5d60e424720661757
+secret: c977638fd4f70cce
