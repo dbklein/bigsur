@@ -6,18 +6,16 @@
 
 <br></br>
 
-
-
 <!-- http://getbootstrap.com/components/#thumbnails -->
 <% if @posts.present? %>
 
     <% @posts.reverse.each do |post| %>
       <div class="well">
-        <h2><%= post[:title] %></h2>
-        <p><%= post[:body] %></p>
+        <h2><%= post.title %></h2>
+        <p>By <%= post.user.email %></p>
+        <p><%= post.body %></p>
       </div>
     <% end %>
-
 
     <% else %>
       <div class="well">
