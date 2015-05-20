@@ -11,7 +11,7 @@
 <!-- http://getbootstrap.com/components/#thumbnails -->
 <% if @posts.present? %>
 
-    <% @posts.each do |post| %>
+    <% @posts.reverse.each do |post| %>
       <div class="well">
         <h2><%= post[:title] %></h2>
         <p><%= post[:body] %></p>
